@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <form
+        action="submit"
+        method="post"
+        class="registration-form"
+        aria-label="Registration Form"
+      >
+        <label for="firstname">First name</label>
+        <input type="text" name="firstname" id="firstname" required />
+        <label for="lastname">Last name</label>
+        <input type="text" name="lasttname" id="lastname" required />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          autocomplete="email"
+          pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+        />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          minlength="8"
+          maxlength="32"
+          pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,32}"
+          title="8-32 characters, include at least one letter and one number"
+        />
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          required
+          minlength="8"
+          maxlength="32"
+          pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,32}"
+        />
+        <label for="DOB">Date of Birth</label>
+        <input type="date" name="DOB" id="DOB" required />
+
+        <div class="gender-selector">
+          <label for="gender"> Gender</label>
+
+          <input type="radio" name="gender" value="male" id="male" />
+          <label for="male"> Male</label>
+
+          <input type="radio" name="gender" value="female" id="female" />
+          <label for="female"> Female</label>
+        </div>
+        <label for="aboutme">About Me</label>
+        <textarea name="aboutme" id="aboutme" required></textarea>
+        <label for="profession">Choose Your Profession</label>
+        <select name="profession" id="profession">
+          <option value="web development">Web Development</option>
+          <option value="data analytics">Data Analytics</option>
+          <option value="uiux">UI/UX Design</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
