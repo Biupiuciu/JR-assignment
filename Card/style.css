@@ -22,6 +22,11 @@ body{
     box-shadow: 0 0 12px 10px #ececec57;
     border-radius: 10px;
     padding: 25px;
+    transition: transform 0.5s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
 }
 
 .card-title{
